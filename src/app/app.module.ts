@@ -4,7 +4,7 @@ import { FeatureRoutingModule } from './app.routes'
 //Rutas
 
 //Servicios
-
+import { HeroesService } from './services/heroes.service';
 //Componentes
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
@@ -25,7 +25,9 @@ import { from } from 'rxjs';
     BrowserModule,
     FeatureRoutingModule
   ],
-  providers: [],
+  providers: [
+    HeroesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
