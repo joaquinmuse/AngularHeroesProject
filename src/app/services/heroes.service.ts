@@ -58,11 +58,14 @@ private heroes:Heroe[]=[
   ];
 
     constructor() { 
-        console.log("servicio listo para usarse");
+        //console.log("servicio listo para usarse");
     }
     
     getHeroes(){
     return this.heroes;
+    }
+    getHeroe(index:string){
+      return this.heroes[index];
     }
 
 }
