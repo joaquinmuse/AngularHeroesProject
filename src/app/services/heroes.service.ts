@@ -67,7 +67,18 @@ private heroes:Heroe[]=[
     getHeroe(index:string){
       return this.heroes[index];
     }
-
+    
+    buscarHeroes(termino:string):Heroe[]{
+    let heroesArray:Heroe[] = [];
+    termino = termino.toLowerCase();
+      for(let heroe of this.heroes){
+        let nombre = heroe.nombre.toLowerCase();
+        if(nombre.indexOf(termino) >= 0){
+          heroesArray.push(heroe);
+        }
+      }
+      return heroesArray;
+    }
 }
 export interface Heroe{
     nombre:string,
